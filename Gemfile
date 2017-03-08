@@ -56,5 +56,9 @@ group :development, :test do
   gem 'spring'
 
   gem 'pry-rails'
+
+  # For debug
+  gem 'pry-byebug'
+  gem 'awesome_print'
 end
 
