@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="container-inner inner-default clearfix">
+    <h1>Have Ranking</h1>
+    <% @items.each_with_index do |item, i| %>
+      <div class="item-box">
+        <div class="ranking">
+          <%= (i + 1).to_s + '位 (' + @haves[item.id].to_s + ' 件)' %>
+        </div>
+        <div class="image">
+          <div class="img-wrap">
+            <% if item.large_image.present? %>
+              <%= image_tag(item.large_image , alt: item.title) %>
+            <% else %>
+              <%= image_tag("no-image.png" , alt: item.title) %>
+            <% end %>
+          </div>
+        </div>
+        <div class="detail">
+          <p class="title">
+            <%= item.title %>
+          </p>
+        </div>
+        <%= render 'items/action', item: item if logged_in? %>
+      </div>
+    <% end %>
+  </div>
+</div>

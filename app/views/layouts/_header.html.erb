@@ -16,6 +16,18 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
+            <li>
+                <%= link_to ranking_have_path do %>
+                  <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+                  Have Ranking
+                <% end %>
+            </li>
+            <li>
+                <%= link_to ranking_want_path do %>
+                  <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+                  Want Ranking
+                <% end %>
+            </li>
             <% unless logged_in? %>
               <li><%= link_to "新規登録", signup_path %></li>
               <li><%= link_to "ログイン", login_path %></li>

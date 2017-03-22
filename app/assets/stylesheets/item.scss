@@ -53,6 +53,16 @@
       display: block;
     }
   }
+  .ranking {
+    height: 55px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    background: #fafafa;
+    font-size: 13px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
 }
 .item-single-main {
   width: 400px;
